@@ -37,16 +37,16 @@ The pipeline mimics how modern mobility platforms process vehicle telemetry stre
 
 ```mermaid
 flowchart TD
-  A[Car Simulator (Python)] -->|JSON telemetry| B[(Kafka: car.telemetry.v1)]
+  A["Car Simulator (Python)"] -->|"JSON telemetry"| B[("Kafka: car.telemetry.v1")]
 
-  B --> C[Stream Processor<br/>Validate • Store • Detect anomalies]
+  B --> C["Stream Processor (Validate, Store, Detect anomalies)"]
 
-  C -->|valid| D[(MongoDB: telemetry.car_telemetry)]
-  C -->|invalid| E[(Kafka DLQ: car.telemetry.dlq.v1)]
-  C -->|anomaly| F[(Kafka: car.telemetry.anomaly.v1)]
+  C -->|"valid"| D[("MongoDB: telemetry.car_telemetry")]
+  C -->|"invalid"| E[("Kafka DLQ: car.telemetry.dlq.v1")]
+  C -->|"anomaly"| F[("Kafka: car.telemetry.anomaly.v1")]
 
-  D --> G[Telemetry API (FastAPI)]
-  G --> H[Grafana Dashboard<br/>Infinity datasource]
+  D --> G["Telemetry API (FastAPI)"]
+  G --> H["Grafana Dashboard (Infinity datasource)"]
 
 ```
 ### Data Flow
