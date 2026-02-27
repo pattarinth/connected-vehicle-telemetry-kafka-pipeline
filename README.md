@@ -33,6 +33,35 @@
 This project simulates connected vehicle telemetry streaming and demonstrates how automotive data platforms ingest, validate, store, and visualize real-time sensor data.
 The pipeline mimics how modern mobility platforms process vehicle telemetry streams from thousands of cars.
 
+## System Architecture
+
+```
+        Car Simulator
+            │
+            ▼
+    Kafka (car.telemetry.v1)
+            │
+            ▼
+        Stream Processor
+(validate • detect anomalies • emit metrics)
+            │
+        ┌───┴───────────────┐
+        ▼                   ▼
+    MongoDB         Kafka DLQ
+    (telemetry)     (invalid events)
+        │
+        ▼
+Telemetry API (FastAPI)
+        │
+        ▼
+    Grafana Dashboards
+    • Fleet Map
+    • Telemetry Metrics
+    • Anomaly Detection
+    • Pipeline Health
+
+```
+
 ## Architecture
 
 ```mermaid
