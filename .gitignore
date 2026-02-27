@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+
+# Virtual environments
+venv/
+.env/
+env/
+car-telemetry/
+
+# Environment variables
+config/.env
+.env
+
+# VSCode
+.vscode/
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Docker
+*.tar
+
+# Kafka temp
+*.tmp
+
+# Large data files
+*.csv
+*.parquet
+*.jsonl
+
+# Python build
+build/
+dist/
+*.egg-info/
