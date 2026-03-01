@@ -1,37 +1,40 @@
-# Connected Vehicle Telemetry Streaming Pipeline (Kafka + MongoDB + Grafana)
-
-
+# Real-Time IoT Telemetry Streaming Pipeline (Kafka + MongoDB + Grafana)
 
 ## What This Project Demonstrates
 
-
-
-• Real-time vehicle telemetry streaming using **Apache Kafka**  
-
+• Real-time IoT telemetry streaming using **Apache Kafka**  
 • Event validation and routing using a **Python stream processor**  
-
 • Storage of high-frequency telemetry data in **MongoDB (NoSQL)**  
-
-• Exposure of time-series data via **FastAPI endpoints**  
-
-• Real-time observability dashboards built with **Grafana**  
-
-• Practical architecture used in **connected vehicle / IoT data platforms**
-
-
+• Exposure of time-series telemetry data through **FastAPI endpoints**  
+• Real-time monitoring dashboards built with **Grafana**  
+• Architecture patterns used in **IoT data platforms and real-time analytics systems**
 
 **Project Type:** Real-Time Data Engineering Pipeline  
-
-**Domain:** Connected Vehicle / Automotive Analytics
-
+**Domain:** IoT Telemetry / Streaming Data Platforms
 
 
-# Real-time vehicle telemetry ingestion pipeline using Kafka, MongoDB, and Grafana
+## Overview
 
+This project implements a real-time **IoT telemetry streaming pipeline** that simulates devices sending sensor data into a scalable data platform.
 
+The system demonstrates how modern IoT platforms ingest, process, store, and visualize continuous streams of telemetry events.
 
-This project simulates connected vehicle telemetry streaming and demonstrates how automotive data platforms ingest, validate, store, and visualize real-time sensor data.
-The pipeline mimics how modern mobility platforms process vehicle telemetry streams from thousands of cars.
+The pipeline includes:
+
+- a **Python-based device simulator** generating telemetry data
+- **Apache Kafka** for real-time event streaming
+- a **stream processing service** for validation and anomaly detection
+- **MongoDB** for high-frequency telemetry storage
+- **FastAPI** for exposing analytics endpoints
+- **Grafana dashboards** for real-time monitoring and observability
+
+While the simulator models **connected vehicles**, the architecture is generic and can support many IoT device types such as:
+
+- industrial sensors  
+- smart city devices  
+- logistics trackers  
+- energy monitoring systems  
+- environmental sensors
 
 ## System Architecture
 
